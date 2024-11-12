@@ -1,3 +1,10 @@
+if ! (( $+commands[mise] )); then
+    return
+fi
+if ! (( $+commands[fzf] )); then
+    return
+fi
+export FZF_MISE_KEY_BINDING="^E"
 
 function fzf-mise() {
   ######################
